@@ -1,0 +1,96 @@
+{
+  "concertsIntro": "2026 年举行的五场线上演出，共覆盖 12 种电子音乐风格。点击任意场次，可查看完整信息。",
+  "concerts": [
+    {
+      "date": "2026-08-07",
+      "dateLabel": "08月07日",
+      "time": "20:00",
+      "title": "坠入光海",
+      "englishTitle": "Falling Into Light",
+      "summary": "从明亮上升到情绪释放的旋律低音之夜",
+      "description": "从轻盈的 Future Bass 出发，逐渐进入更厚重的 Melodic Bass，最后在兼具爆发力与抒情感的 Melodic Dubstep 中完成情绪释放。",
+      "genres": ["Future Bass", "Melodic Bass", "Melodic Dubstep"],
+      "tracks": 13,
+      "duration": "约 61 分钟",
+      "attendees": 212,
+      "replay": "无回放"
+    },
+    {
+      "date": "2026-06-20",
+      "dateLabel": "06月20日",
+      "time": "21:00",
+      "title": "失重急流",
+      "englishTitle": "Weightless Rush",
+      "summary": "高速碎拍、低频与持续向前的冲刺感",
+      "description": "以流畅而现代的 Drum & Bass 建立速度，随后进入更加粗粝、自由且充满切分感的 Jungle，是五场演出中节奏密度最高的一场。",
+      "genres": ["Drum & Bass", "Jungle"],
+      "tracks": 15,
+      "duration": "约 59 分钟",
+      "attendees": 168,
+      "replay": "无回放"
+    },
+    {
+      "date": "2026-05-02",
+      "dateLabel": "05月02日",
+      "time": "20:30",
+      "title": "零点地下层",
+      "englishTitle": "Floor Below Zero",
+      "summary": "机械节奏与酸性合成器构成的地下空间",
+      "description": "用简洁、机械且持续推进的 Techno 建立空间，再逐渐引入 Acid Techno 标志性的酸性合成器线条，在音色变化中不断增加压力。",
+      "genres": ["Techno", "Acid Techno"],
+      "tracks": 12,
+      "duration": "约 62 分钟",
+      "attendees": 109,
+      "replay": "无回放"
+    },
+    {
+      "date": "2026-02-20",
+      "dateLabel": "02月20日",
+      "time": "21:00",
+      "title": "霓虹转速",
+      "englishTitle": "Neon RPM",
+      "summary": "复古合成器、稳定四拍与华丽舞池律动",
+      "description": "Italo Disco 带来八十年代未来感，Hi-NRG 将速度和能量推高，再由 Nu-Disco 衔接到更现代、更精致的制作质感。",
+      "genres": ["Italo Disco", "Hi-NRG", "Nu-Disco"],
+      "tracks": 15,
+      "duration": "约 60 分钟",
+      "attendees": 54,
+      "replay": "无回放"
+    },
+    {
+      "date": "2026-01-02",
+      "dateLabel": "01月02日",
+      "time": "22:00",
+      "title": "凌晨四点的空气",
+      "englishTitle": "4AM Air",
+      "summary": "在环境声与缓慢鼓点中逐渐沉入深夜",
+      "description": "以 Ambient 的空间感和环境声音开场，再通过 Downtempo 加入缓慢的鼓点与低频，不追求高潮，更像一段逐渐沉入梦境的声音旅程。",
+      "genres": ["Ambient", "Downtempo"],
+      "tracks": 11,
+      "duration": "约 63 分钟",
+      "attendees": 37,
+      "replay": "无回放"
+    }
+  ],
+  "submission": {
+    "intro": "如果您也在从事电子音乐创作，欢迎将作品发送给我们。我们将逐步收集并整理大家的投稿，在作品数量达到一定规模后，策划举办一场线上音乐会进行集中展示。演出时间确定后，我们会通过您留下的邮箱另行通知。",
+    "requirements": [
+      "作品名称 - 制作人",
+      "音频文件或公开试听链接",
+      "您认为合适的曲风标签",
+      "一段简短的作品说明",
+      "可以联系到您的邮箱"
+    ],
+    "email": "3273955540@qq.com",
+    "emailSubject": "电音作品投稿",
+    "followUp": "若邮件发送后 3 天内未收到回复邮件，请添加 QQ：3273955540"
+  },
+  "about": {
+    "maintainer": "Illusix Liu",
+    "source": {
+      "label": "【全网最全！1000+个电音风格/标签科普介绍视频丨共计6个小时的电音宇宙漫游指南第四期！-哔哩哔哩】",
+      "url": "https://b23.tv/0pENheJ"
+    },
+    "feedback": "如有错误请添加 QQ：3273955540"
+  }
+}

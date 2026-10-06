@@ -6,6 +6,7 @@
   const searchInput = document.querySelector("#global-search");
   const searchResults = document.querySelector("#search-results");
   let data;
+  let siteContent;
   let nodes;
   let children;
 
@@ -135,13 +136,14 @@
   const renderAbout = () => {
     setActiveNav("about");
     document.title = "关于本站｜电音风格图鉴";
+    const about = siteContent.about;
     app.innerHTML = `<section class="page about">
       <div class="eyebrow">About this atlas</div>
       <h1>关于本站</h1>
       <div class="about-list">
         <div class="about-row">
           <div class="about-key">维护</div>
-          <div class="about-value">Illusix Liu</div>
+          <div class="about-value">${escapeHtml(about.maintainer)}</div>
         </div>
         <div class="about-row">
           <div class="about-key">内容</div>
@@ -155,11 +157,11 @@
         </div>
         <div class="about-row">
           <div class="about-key">资料来源</div>
-          <div class="about-value"><a class="about-link" href="https://b23.tv/0pENheJ" target="_blank" rel="noopener noreferrer">【全网最全！1000+个电音风格/标签科普介绍视频丨共计6个小时的电音宇宙漫游指南第四期！-哔哩哔哩】</a></div>
+          <div class="about-value"><a class="about-link" href="${escapeHtml(about.source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(about.source.label)}</a></div>
         </div>
         <div class="about-row">
           <div class="about-key">反馈</div>
-          <div class="about-value">如有错误请添加 QQ：3273955540</div>
+          <div class="about-value">${escapeHtml(about.feedback)}</div>
         </div>
       </div>
     </section>`;
@@ -168,78 +170,34 @@
   const renderConcerts = () => {
     setActiveNav("concerts");
     document.title = "线上音乐会｜电音风格图鉴";
+    const concerts = [...siteContent.concerts].sort((a, b) => b.date.localeCompare(a.date));
+    const genreCount = new Set(concerts.flatMap(concert => concert.genres)).size;
+    const attendeeCount = concerts.reduce((sum, concert) => sum + concert.attendees, 0);
+    const concertRows = concerts.map(concert => `<details class="concert-item">
+      <summary>
+        <span class="concert-date"><b>${escapeHtml(concert.dateLabel)}</b><span>${escapeHtml(concert.time)}</span></span>
+        <span class="concert-main"><strong>${escapeHtml(concert.title)} <i>${escapeHtml(concert.englishTitle)}</i></strong><small>${escapeHtml(concert.summary)}</small></span>
+        <span class="concert-arrow" aria-hidden="true">↗</span>
+      </summary>
+      <div class="concert-detail">
+        <p>${escapeHtml(concert.description)}</p>
+        <div class="concert-tags">${concert.genres.map(genre => `<span>${escapeHtml(genre)}</span>`).join("")}</div>
+        <div class="concert-meta"><span><b>${concert.tracks} 首</b>曲目数量</span><span><b>${escapeHtml(concert.duration)}</b>总时长</span><span><b>${concert.attendees} 人</b>参与人数</span><span><b>${escapeHtml(concert.replay)}</b>回放状态</span></div>
+      </div>
+    </details>`).join("");
     app.innerHTML = `<section class="page utility-page">
       <div class="utility-heading">
         <div>
           <div class="eyebrow">Live electronic music</div>
           <h1>线上音乐会</h1>
         </div>
-        <p>2026 年举行的五场线上演出，共覆盖 12 种电子音乐风格。点击任意场次，可查看完整信息。</p>
+        <p>${escapeHtml(siteContent.concertsIntro)}</p>
       </div>
       <div class="concert-stats" aria-label="演出统计">
-        <span><b>5</b> 场演出</span><span><b>12</b> 种曲风</span><span><b>580</b> 人参与</span>
+        <span><b>${concerts.length}</b> 场演出</span><span><b>${genreCount}</b> 种曲风</span><span><b>${attendeeCount}</b> 人参与</span>
       </div>
       <div class="concert-list" aria-label="2026 年线上音乐会记录">
-        <details class="concert-item">
-          <summary>
-            <span class="concert-date"><b>08月07日</b><span>20:00</span></span>
-            <span class="concert-main"><strong>坠入光海 <i>Falling Into Light</i></strong><small>从明亮上升到情绪释放的旋律低音之夜</small></span>
-            <span class="concert-arrow" aria-hidden="true">↗</span>
-          </summary>
-          <div class="concert-detail">
-            <p>从轻盈的 Future Bass 出发，逐渐进入更厚重的 Melodic Bass，最后在兼具爆发力与抒情感的 Melodic Dubstep 中完成情绪释放。</p>
-            <div class="concert-tags"><span>Future Bass</span><span>Melodic Bass</span><span>Melodic Dubstep</span></div>
-            <div class="concert-meta"><span><b>13 首</b>曲目数量</span><span><b>约 61 分钟</b>总时长</span><span><b>212 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
-          </div>
-        </details>
-        <details class="concert-item">
-          <summary>
-            <span class="concert-date"><b>06月20日</b><span>21:00</span></span>
-            <span class="concert-main"><strong>失重急流 <i>Weightless Rush</i></strong><small>高速碎拍、低频与持续向前的冲刺感</small></span>
-            <span class="concert-arrow" aria-hidden="true">↗</span>
-          </summary>
-          <div class="concert-detail">
-            <p>以流畅而现代的 Drum &amp; Bass 建立速度，随后进入更加粗粝、自由且充满切分感的 Jungle，是五场演出中节奏密度最高的一场。</p>
-            <div class="concert-tags"><span>Drum &amp; Bass</span><span>Jungle</span></div>
-            <div class="concert-meta"><span><b>15 首</b>曲目数量</span><span><b>约 59 分钟</b>总时长</span><span><b>168 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
-          </div>
-        </details>
-        <details class="concert-item">
-          <summary>
-            <span class="concert-date"><b>05月02日</b><span>20:30</span></span>
-            <span class="concert-main"><strong>零点地下层 <i>Floor Below Zero</i></strong><small>机械节奏与酸性合成器构成的地下空间</small></span>
-            <span class="concert-arrow" aria-hidden="true">↗</span>
-          </summary>
-          <div class="concert-detail">
-            <p>用简洁、机械且持续推进的 Techno 建立空间，再逐渐引入 Acid Techno 标志性的酸性合成器线条，在音色变化中不断增加压力。</p>
-            <div class="concert-tags"><span>Techno</span><span>Acid Techno</span></div>
-            <div class="concert-meta"><span><b>12 首</b>曲目数量</span><span><b>约 62 分钟</b>总时长</span><span><b>109 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
-          </div>
-        </details>
-        <details class="concert-item">
-          <summary>
-            <span class="concert-date"><b>02月20日</b><span>21:00</span></span>
-            <span class="concert-main"><strong>霓虹转速 <i>Neon RPM</i></strong><small>复古合成器、稳定四拍与华丽舞池律动</small></span>
-            <span class="concert-arrow" aria-hidden="true">↗</span>
-          </summary>
-          <div class="concert-detail">
-            <p>Italo Disco 带来八十年代未来感，Hi-NRG 将速度和能量推高，再由 Nu-Disco 衔接到更现代、更精致的制作质感。</p>
-            <div class="concert-tags"><span>Italo Disco</span><span>Hi-NRG</span><span>Nu-Disco</span></div>
-            <div class="concert-meta"><span><b>15 首</b>曲目数量</span><span><b>约 60 分钟</b>总时长</span><span><b>54 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
-          </div>
-        </details>
-        <details class="concert-item">
-          <summary>
-            <span class="concert-date"><b>01月02日</b><span>22:00</span></span>
-            <span class="concert-main"><strong>凌晨四点的空气 <i>4AM Air</i></strong><small>在环境声与缓慢鼓点中逐渐沉入深夜</small></span>
-            <span class="concert-arrow" aria-hidden="true">↗</span>
-          </summary>
-          <div class="concert-detail">
-            <p>以 Ambient 的空间感和环境声音开场，再通过 Downtempo 加入缓慢的鼓点与低频，不追求高潮，更像一段逐渐沉入梦境的声音旅程。</p>
-            <div class="concert-tags"><span>Ambient</span><span>Downtempo</span></div>
-            <div class="concert-meta"><span><b>11 首</b>曲目数量</span><span><b>约 63 分钟</b>总时长</span><span><b>37 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
-          </div>
-        </details>
+        ${concertRows}
       </div>
     </section>`;
   };
@@ -247,25 +205,20 @@
   const renderSubmit = () => {
     setActiveNav("submit");
     document.title = "作品投稿｜电音风格图鉴";
+    const submission = siteContent.submission;
     app.innerHTML = `<section class="page utility-page">
       <div class="utility-heading">
         <div>
           <div class="eyebrow">Share your track</div>
           <h1>作品投稿</h1>
         </div>
-        <p>如果您也在从事电子音乐创作，欢迎将作品发送给我们。我们将逐步收集并整理大家的投稿，在作品数量达到一定规模后，策划举办一场线上音乐会进行集中展示。演出时间确定后，我们会通过您留下的邮箱另行通知。</p>
+        <p>${escapeHtml(submission.intro)}</p>
       </div>
       <div class="submission-grid">
         <article class="submission-card">
           <span class="card-number">01</span>
           <h2>准备投稿内容</h2>
-          <ul>
-            <li>作品名称 - 制作人</li>
-            <li>音频文件或公开试听链接</li>
-            <li>您认为合适的曲风标签</li>
-            <li>一段简短的作品说明</li>
-            <li>可以联系到您的邮箱</li>
-          </ul>
+          <ul>${submission.requirements.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
         </article>
         <article class="submission-card submission-contact">
           <span class="card-number">02</span>
@@ -274,10 +227,10 @@
             <span class="status-dot" aria-hidden="true"></span>
             <div>
               <span class="submission-label">投稿邮箱</span>
-              <a class="submission-email" href="mailto:3273955540@qq.com?subject=电音作品投稿">3273955540@qq.com</a>
+              <a class="submission-email" href="mailto:${escapeHtml(submission.email)}?subject=${encodeURIComponent(submission.emailSubject)}">${escapeHtml(submission.email)}</a>
             </div>
           </div>
-          <p class="submission-note">若邮件发送后 3 天内未收到回复邮件，请添加 QQ：3273955540</p>
+          <p class="submission-note">${escapeHtml(submission.followUp)}</p>
         </article>
       </div>
     </section>`;
@@ -357,13 +310,13 @@
   });
   window.addEventListener("hashchange", route);
 
-  fetch("./genres.json")
-    .then(response => {
-      if (!response.ok) throw new Error(`资料载入失败（${response.status}）`);
-      return response.json();
-    })
-    .then(payload => {
-      data = payload;
+  Promise.all(["./genres.json", "./content.json"].map(url => fetch(url).then(response => {
+    if (!response.ok) throw new Error(`资料载入失败（${response.status}）`);
+    return response.json();
+  })))
+    .then(([genrePayload, contentPayload]) => {
+      data = genrePayload;
+      siteContent = contentPayload;
       nodes = new Map(data.nodes.map(node => [node.id, node]));
       children = new Map();
       data.nodes.forEach(node => {
