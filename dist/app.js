@@ -253,7 +253,7 @@
           <div class="eyebrow">Share your track</div>
           <h1>作品投稿</h1>
         </div>
-        <p>如果你也在做电子音乐，欢迎把作品发给我。我会慢慢把大家的创作收集起来，等攒到合适的数量，就专门办一场线上音乐会来分享。确定演出时间后，我会通过你留下的邮箱通知你。</p>
+        <p>如果您也在从事电子音乐创作，欢迎将作品发送给我们。我们将逐步收集并整理大家的投稿，在作品数量达到一定规模后，策划举办一场线上音乐会进行集中展示。演出时间确定后，我们会通过您留下的邮箱另行通知。</p>
       </div>
       <div class="submission-grid">
         <article class="submission-card">
@@ -262,9 +262,9 @@
           <ul>
             <li>作品名称 - 制作人</li>
             <li>音频文件或公开试听链接</li>
-            <li>你认为合适的曲风标签</li>
+            <li>您认为合适的曲风标签</li>
             <li>一段简短的作品说明</li>
-            <li>可以联系到你的邮箱</li>
+            <li>可以联系到您的邮箱</li>
           </ul>
         </article>
         <article class="submission-card submission-contact">
@@ -275,7 +275,6 @@
             <div>
               <span class="submission-label">投稿邮箱</span>
               <a class="submission-email" href="mailto:3273955540@qq.com?subject=电音作品投稿">3273955540@qq.com</a>
-              <p>投稿时请一并留下联系邮箱，之后如举办线上音乐会，会通过这个地址通知你。</p>
             </div>
           </div>
           <p class="submission-note">若邮件发送后 3 天内未收到回复邮件，请添加 QQ：3273955540</p>
