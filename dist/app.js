@@ -174,19 +174,72 @@
           <div class="eyebrow">Live electronic music</div>
           <h1>线上音乐会</h1>
         </div>
-        <p>收录值得观看的电子音乐演出与直播，保留观看入口、时间和简短的内容摘要。</p>
+        <p>2026 年举行的五场线上演出，共覆盖 12 种电子音乐风格。点击任意场次，可查看完整信息。</p>
       </div>
-      <div class="concert-board" aria-label="线上音乐会列表">
-        <div class="concert-columns" aria-hidden="true">
-          <span>时间</span><span>演出 / 直播主题</span><span>平台</span><span>内容摘要</span>
-        </div>
-        <div class="concert-empty">
-          <span class="status-dot" aria-hidden="true"></span>
-          <div>
-            <strong>暂时还没有收录场次</strong>
-            <p>之后新增内容时，这里会直接显示直播链接与基本介绍。</p>
+      <div class="concert-stats" aria-label="演出统计">
+        <span><b>5</b> 场演出</span><span><b>12</b> 种曲风</span><span><b>580</b> 人参与</span>
+      </div>
+      <div class="concert-list" aria-label="2026 年线上音乐会记录">
+        <details class="concert-item">
+          <summary>
+            <span class="concert-date"><b>08月07日</b><span>20:00</span></span>
+            <span class="concert-main"><strong>坠入光海 <i>Falling Into Light</i></strong><small>从明亮上升到情绪释放的旋律低音之夜</small></span>
+            <span class="concert-arrow" aria-hidden="true">↗</span>
+          </summary>
+          <div class="concert-detail">
+            <p>从轻盈的 Future Bass 出发，逐渐进入更厚重的 Melodic Bass，最后在兼具爆发力与抒情感的 Melodic Dubstep 中完成情绪释放。</p>
+            <div class="concert-tags"><span>Future Bass</span><span>Melodic Bass</span><span>Melodic Dubstep</span></div>
+            <div class="concert-meta"><span><b>13 首</b>曲目数量</span><span><b>约 61 分钟</b>总时长</span><span><b>212 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
           </div>
-        </div>
+        </details>
+        <details class="concert-item">
+          <summary>
+            <span class="concert-date"><b>06月20日</b><span>21:00</span></span>
+            <span class="concert-main"><strong>失重急流 <i>Weightless Rush</i></strong><small>高速碎拍、低频与持续向前的冲刺感</small></span>
+            <span class="concert-arrow" aria-hidden="true">↗</span>
+          </summary>
+          <div class="concert-detail">
+            <p>以流畅而现代的 Drum &amp; Bass 建立速度，随后进入更加粗粝、自由且充满切分感的 Jungle，是五场演出中节奏密度最高的一场。</p>
+            <div class="concert-tags"><span>Drum &amp; Bass</span><span>Jungle</span></div>
+            <div class="concert-meta"><span><b>15 首</b>曲目数量</span><span><b>约 59 分钟</b>总时长</span><span><b>168 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
+          </div>
+        </details>
+        <details class="concert-item">
+          <summary>
+            <span class="concert-date"><b>05月02日</b><span>20:30</span></span>
+            <span class="concert-main"><strong>零点地下层 <i>Floor Below Zero</i></strong><small>机械节奏与酸性合成器构成的地下空间</small></span>
+            <span class="concert-arrow" aria-hidden="true">↗</span>
+          </summary>
+          <div class="concert-detail">
+            <p>用简洁、机械且持续推进的 Techno 建立空间，再逐渐引入 Acid Techno 标志性的酸性合成器线条，在音色变化中不断增加压力。</p>
+            <div class="concert-tags"><span>Techno</span><span>Acid Techno</span></div>
+            <div class="concert-meta"><span><b>12 首</b>曲目数量</span><span><b>约 62 分钟</b>总时长</span><span><b>109 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
+          </div>
+        </details>
+        <details class="concert-item">
+          <summary>
+            <span class="concert-date"><b>02月20日</b><span>21:00</span></span>
+            <span class="concert-main"><strong>霓虹转速 <i>Neon RPM</i></strong><small>复古合成器、稳定四拍与华丽舞池律动</small></span>
+            <span class="concert-arrow" aria-hidden="true">↗</span>
+          </summary>
+          <div class="concert-detail">
+            <p>Italo Disco 带来八十年代未来感，Hi-NRG 将速度和能量推高，再由 Nu-Disco 衔接到更现代、更精致的制作质感。</p>
+            <div class="concert-tags"><span>Italo Disco</span><span>Hi-NRG</span><span>Nu-Disco</span></div>
+            <div class="concert-meta"><span><b>15 首</b>曲目数量</span><span><b>约 60 分钟</b>总时长</span><span><b>54 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
+          </div>
+        </details>
+        <details class="concert-item">
+          <summary>
+            <span class="concert-date"><b>01月02日</b><span>22:00</span></span>
+            <span class="concert-main"><strong>凌晨四点的空气 <i>4AM Air</i></strong><small>在环境声与缓慢鼓点中逐渐沉入深夜</small></span>
+            <span class="concert-arrow" aria-hidden="true">↗</span>
+          </summary>
+          <div class="concert-detail">
+            <p>以 Ambient 的空间感和环境声音开场，再通过 Downtempo 加入缓慢的鼓点与低频，不追求高潮，更像一段逐渐沉入梦境的声音旅程。</p>
+            <div class="concert-tags"><span>Ambient</span><span>Downtempo</span></div>
+            <div class="concert-meta"><span><b>11 首</b>曲目数量</span><span><b>约 63 分钟</b>总时长</span><span><b>37 人</b>参与人数</span><span><b>无回放</b>回放状态</span></div>
+          </div>
+        </details>
       </div>
     </section>`;
   };
