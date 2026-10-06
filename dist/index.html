@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按层级浏览和搜索 1000 多种电子音乐风格，并查看代表曲目。">
+  <meta name="theme-color" content="#0a0b0f">
+  <title>电音风格图鉴</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0b0f'/%3E%3Cpath d='M13 36h8l5-18 10 31 6-21 4 8h5' fill='none' stroke='%23d7ff3f' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail">
+      <a class="brand" href="#/" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">I6</span>
+        <span class="brand-copy">电音风格图鉴<small>Electronic Genre Atlas</small></span>
+      </a>
+      <nav class="rail-nav" aria-label="主要导航">
+        <a href="#/" data-nav="atlas" class="is-active"><span>01</span>曲风图鉴</a>
+        <button type="button" id="nav-search"><span>02</span>全站搜索</button>
+        <a href="#/about" data-nav="about"><span>03</span>关于本站</a>
+      </nav>
+      <div class="rail-meta">
+        <span id="rail-count">载入资料中</span>
+        <span>illusix6.com</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-brand" type="button" id="mobile-home">电音风格图鉴</button>
+        <button class="search-trigger" type="button" id="search-trigger" aria-haspopup="dialog">
+          <span aria-hidden="true">⌕</span>
+          <span>搜索曲风或别名</span>
+          <kbd>/</kbd>
+        </button>
+      </header>
+      <div id="app" aria-live="polite">
+        <div class="loading">正在整理声音谱系……</div>
+      </div>
+    </main>
+  </div>
+
+  <dialog class="search-dialog" id="search-dialog">
+    <form method="dialog" class="search-head">
+      <label>
+        <span aria-hidden="true">⌕</span>
+        <input id="global-search" type="search" autocomplete="off" placeholder="输入 House、Jersey、氛围……" aria-label="搜索曲风或别名">
+      </label>
+      <button type="submit">关闭</button>
+    </form>
+    <div class="search-results" id="search-results"></div>
+  </dialog>
+
+  <noscript>请启用 JavaScript 浏览曲风图鉴。</noscript>
+  <script src="./app.js" defer></script>
+</body>
+</html>
