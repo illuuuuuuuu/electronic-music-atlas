@@ -159,7 +159,7 @@
         </div>
         <div class="about-row">
           <div class="about-key">反馈</div>
-          <div class="about-value">如有错误请前往 <a class="about-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub 反馈</a></div>
+          <div class="about-value">如有错误请添加 QQ：3273955540</div>
         </div>
       </div>
     </section>`;
