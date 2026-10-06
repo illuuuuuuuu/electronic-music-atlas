@@ -168,11 +168,11 @@ button.tag:hover { border-color: var(--accent); color: var(--accent); }
 .submission-status p { margin: 7px 0 0; color: var(--dim); line-height: 1.65; }
 .status-dot { width: 10px; height: 10px; flex: 0 0 auto; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 6px rgba(215, 255, 63, .09); }
 .submission-grid { margin-top: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.submission-card { min-height: 360px; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: flex; flex-direction: column; }
+.submission-card { min-height: 0; padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); display: flex; flex-direction: column; }
 .card-number { color: var(--dim); font-size: 12px; letter-spacing: .12em; }
-.submission-card h2 { margin: 104px 0 0; padding-top: 0; }
-.submission-card ul { margin: 24px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.submission-card li { padding: 13px 0; border-bottom: 1px solid var(--line); color: #d6d8de; line-height: 1.5; }
+.submission-card h2 { margin: 64px 0 0; padding-top: 0; }
+.submission-card ul { margin: 18px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.submission-card li { padding: 10px 0; border-bottom: 1px solid var(--line); color: #d6d8de; line-height: 1.45; }
 .submission-card li::before { content: "↳"; margin-right: 10px; color: var(--accent); }
 .submission-contact { background: var(--accent); color: var(--accent-ink); }
 .submission-contact .card-number { color: rgba(16, 19, 8, .55); }
@@ -243,8 +243,8 @@ button.tag:hover { border-color: var(--accent); color: var(--accent); }
   .concert-arrow { font-size: 22px; }
   .concert-detail { margin: 0 0 20px; padding: 18px; }
   .concert-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .submission-card { min-height: 320px; }
-  .submission-card h2 { margin-top: 60px; }
+  .submission-card { min-height: 0; }
+  .submission-card h2 { margin-top: 42px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
