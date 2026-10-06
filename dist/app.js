@@ -165,6 +165,66 @@
     </section>`;
   };
 
+  const renderConcerts = () => {
+    setActiveNav("concerts");
+    document.title = "线上音乐会｜电音风格图鉴";
+    app.innerHTML = `<section class="page utility-page">
+      <div class="utility-heading">
+        <div>
+          <div class="eyebrow">Live electronic music</div>
+          <h1>线上音乐会</h1>
+        </div>
+        <p>收录值得观看的电子音乐演出与直播，保留观看入口、时间和简短的内容摘要。</p>
+      </div>
+      <div class="concert-board" aria-label="线上音乐会列表">
+        <div class="concert-columns" aria-hidden="true">
+          <span>时间</span><span>演出 / 直播主题</span><span>平台</span><span>内容摘要</span>
+        </div>
+        <div class="concert-empty">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>暂时还没有收录场次</strong>
+            <p>之后新增内容时，这里会直接显示直播链接与基本介绍。</p>
+          </div>
+        </div>
+      </div>
+    </section>`;
+  };
+
+  const renderSubmit = () => {
+    setActiveNav("submit");
+    document.title = "作品投稿｜电音风格图鉴";
+    app.innerHTML = `<section class="page utility-page">
+      <div class="utility-heading">
+        <div>
+          <div class="eyebrow">Share your track</div>
+          <h1>作品投稿</h1>
+        </div>
+        <p>如果你正在制作电子音乐，可以把作品与曲风信息发来。合适的作品会作为图鉴的补充内容分享。</p>
+      </div>
+      <div class="submission-grid">
+        <article class="submission-card">
+          <span class="card-number">01</span>
+          <h2>准备投稿内容</h2>
+          <ul>
+            <li>作品名称 - 制作人</li>
+            <li>音频文件或公开试听链接</li>
+            <li>你认为合适的曲风标签</li>
+            <li>一段简短的作品说明</li>
+          </ul>
+        </article>
+        <article class="submission-card submission-contact">
+          <span class="card-number">02</span>
+          <h2>发送作品</h2>
+          <div class="submission-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <div><strong>投稿邮箱待公布</strong><p>邮箱确认后，这里会直接提供投稿入口。</p></div>
+          </div>
+        </article>
+      </div>
+    </section>`;
+  };
+
   const renderNotFound = () => {
     setActiveNav("atlas");
     app.innerHTML = `<section class="page"><div class="eyebrow">404</div><h1>没有找到这个曲风。</h1><p class="about-copy"><a href="#/">返回全部篇章</a></p></section>`;
@@ -210,6 +270,8 @@
     if (!data) return;
     const hash = location.hash || "#/";
     if (hash === "#/" || hash === "#") renderHome();
+    else if (hash === "#/concerts") renderConcerts();
+    else if (hash === "#/submit") renderSubmit();
     else if (hash === "#/about") renderAbout();
     else if (hash.startsWith("#/genre/")) renderNode(decodeURIComponent(hash.slice(8)));
     else renderNotFound();
