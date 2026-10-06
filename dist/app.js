@@ -138,15 +138,29 @@
     app.innerHTML = `<section class="page about">
       <div class="eyebrow">About this atlas</div>
       <h1>关于本站</h1>
-      <div class="about-copy">
-        <p>电音风格图鉴是一个以“查找关系”为核心的电子音乐分类站。首页从 16 个大类出发，沿着文档中的目录层级逐步进入具体曲风。</p>
-        <p>本站暂时忽略长篇文字介绍，只保留上下级目录、别名、影响与衍生关系，以及最多三首代表曲目。分类并不是绝对边界，而是一种方便理解和继续探索的入口。</p>
-        <p>当前为第一版数据转换结果。部分跨章节引用、重复命名和推荐歌曲仍需要后续人工校对。</p>
-      </div>
-      <div class="about-data">
-        <div><strong>${data.stats.chapters}</strong><span>一级篇章</span></div>
-        <div><strong>${data.stats.genres}</strong><span>曲风条目</span></div>
-        <div><strong>${data.stats.maxLevel}</strong><span>最深子层级</span></div>
+      <div class="about-list">
+        <div class="about-row">
+          <div class="about-key">维护</div>
+          <div class="about-value">Illusix Liu</div>
+        </div>
+        <div class="about-row">
+          <div class="about-key">内容</div>
+          <div class="about-value">
+            <div class="about-data">
+              <div><strong>${data.stats.chapters}</strong><span>一级篇章</span></div>
+              <div><strong>${data.stats.genres}</strong><span>曲风条目</span></div>
+              <div><strong>${data.stats.maxLevel}</strong><span>最深子层级</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="about-row">
+          <div class="about-key">资料来源</div>
+          <div class="about-value"><a class="about-link" href="https://b23.tv/0pENheJ" target="_blank" rel="noopener noreferrer">【全网最全！1000+个电音风格/标签科普介绍视频丨共计6个小时的电音宇宙漫游指南第四期！-哔哩哔哩】</a></div>
+        </div>
+        <div class="about-row">
+          <div class="about-key">反馈</div>
+          <div class="about-value">如有错误请前往 <a class="about-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub 反馈</a></div>
+        </div>
       </div>
     </section>`;
   };
@@ -210,7 +224,6 @@
     }
   });
   document.querySelector("#search-trigger").addEventListener("click", openSearch);
-  document.querySelector("#nav-search").addEventListener("click", openSearch);
   document.querySelector("#mobile-home").addEventListener("click", () => navigate());
   searchInput.addEventListener("input", event => renderSearch(event.target.value));
   dialog.addEventListener("click", event => {

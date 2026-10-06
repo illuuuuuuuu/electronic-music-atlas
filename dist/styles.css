@@ -126,9 +126,13 @@ button.tag:hover { border-color: var(--accent); color: var(--accent); }
 
 .about { max-width: 880px; }
 .about h1 { margin-top: 12px; }
-.about-copy { margin-top: 38px; color: #c9ccd2; font-size: 18px; line-height: 1.85; }
-.about-copy p { margin-bottom: 20px; }
-.about-data { margin-top: 38px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.about-list { margin-top: 42px; border-top: 1px solid var(--line); }
+.about-row { padding: 24px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px; align-items: start; }
+.about-key { color: var(--dim); font-size: 17px; line-height: 1.65; }
+.about-value { color: #d6d8de; font-size: 18px; line-height: 1.75; }
+.about-link { color: var(--accent); text-decoration: none; text-underline-offset: 4px; }
+.about-link:hover { text-decoration: underline; }
+.about-data { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .about-data div { padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: var(--panel); }
 .about-data strong { display: block; font-size: 30px; font-weight: 560; letter-spacing: -.04em; }
 .about-data span { color: var(--dim); font-size: 12px; }
@@ -180,6 +184,7 @@ button.tag:hover { border-color: var(--accent); color: var(--accent); }
   .chapter-card { padding: 14px; }
   .subgrid { grid-template-columns: 1fr; }
   .detail-panel { gap: 28px; padding: 20px; }
+  .about-row { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
   .about-data { grid-template-columns: 1fr; }
 }
 
