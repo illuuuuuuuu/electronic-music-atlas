@@ -45,7 +45,7 @@
 
   const renderHome = () => {
     setActiveNav("atlas");
-    document.title = "电音风格图鉴";
+    document.title = "I6 SIGNAL";
     const cards = data.rootIds.map((id, index) => {
       const node = byId(id);
       return `<button class="chapter-card" type="button" data-open="${node.id}">
@@ -88,7 +88,7 @@
     const node = byId(id);
     if (!node) return renderNotFound();
     setActiveNav("atlas");
-    document.title = `${node.name}｜电音风格图鉴`;
+    document.title = `${node.name}｜I6 SIGNAL`;
     const path = pathFor(node);
     const childNodes = children.get(node.id) || [];
     const breadcrumbs = [`<a href="#/">首页</a>`].concat(path.map((item, index) => {
@@ -135,7 +135,7 @@
 
   const renderAbout = () => {
     setActiveNav("about");
-    document.title = "关于本站｜电音风格图鉴";
+    document.title = "关于本站｜I6 SIGNAL";
     const about = siteContent.about;
     app.innerHTML = `<section class="page about">
       <div class="eyebrow">About this atlas</div>
@@ -169,7 +169,7 @@
 
   const renderConcerts = () => {
     setActiveNav("concerts");
-    document.title = "线上音乐会｜电音风格图鉴";
+    document.title = "线上音乐会｜I6 SIGNAL";
     const concerts = [...siteContent.concerts].sort((a, b) => b.date.localeCompare(a.date));
     const genreCount = new Set(concerts.flatMap(concert => concert.genres)).size;
     const attendeeCount = concerts.reduce((sum, concert) => sum + concert.attendees, 0);
@@ -204,7 +204,7 @@
 
   const renderSubmit = () => {
     setActiveNav("submit");
-    document.title = "作品投稿｜电音风格图鉴";
+    document.title = "作品投稿｜I6 SIGNAL";
     const submission = siteContent.submission;
     app.innerHTML = `<section class="page utility-page">
       <div class="utility-heading">
