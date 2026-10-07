@@ -59,7 +59,7 @@
       <div class="hero">
         <div>
           <div class="eyebrow">Electronic music field guide</div>
-          <h1>从一个篇章，进入声音的谱系。</h1>
+          <h1><span class="hero-title-line">从一个篇章，</span><span class="hero-title-line">进入声音的谱系。</span></h1>
         </div>
         <p class="hero-note">选择 16 个一级分类中的一个，继续进入它的下一级。这里只保留分类关系、别名和代表曲目，让复杂的谱系更容易查阅。</p>
       </div>

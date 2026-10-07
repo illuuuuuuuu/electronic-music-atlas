@@ -75,7 +75,8 @@ h1 { margin-bottom: 0; font-size: clamp(42px, 7vw, 94px); line-height: 0.92; let
 h2 { margin-bottom: 0; font-size: clamp(24px, 3vw, 38px); line-height: 1; letter-spacing: -0.045em; font-weight: 580; }
 h3 { font-size: 18px; font-weight: 600; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr); gap: 36px; align-items: end; }
-.hero h1 { max-width: 880px; margin-top: 14px; }
+.hero h1 { max-width: 880px; margin-top: 14px; font-size: clamp(36px, 5vw, 78px); line-height: .96; }
+.hero-title-line { display: block; white-space: nowrap; }
 .hero-note { max-width: 440px; color: var(--dim); line-height: 1.75; margin-bottom: 2px; }
 .stats { display: flex; gap: 22px; margin-top: 36px; flex-wrap: wrap; color: var(--dim); font-size: 13px; }
 .stats b { color: var(--text); font-weight: 550; }
